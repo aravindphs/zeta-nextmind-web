@@ -1,0 +1,48 @@
+/* Toast Notification Styles */
+#toast-container {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px; /* Rounded pill shape */
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    font-size: 16px;
+    font-family: var(--default-font, sans-serif);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #1d1f20 0%, #2f3136 100%);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+#toast-container.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* Slight slide up animation */
+}
+
+#toast-container .toast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+}
+
+#toast-container .toast-message {
+    font-weight: 500;
+}
